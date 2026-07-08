@@ -1,0 +1,82 @@
+.app-navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* centraliza a lista */
+  align-items: center;     /* alinha verticalmente com o header */
+  padding: 0.6rem 1rem;
+  margin-top: 0.6rem;
+  background: transparent;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+/* Lista centralizada e com wrap quando necessário */
+.app-navbar__list {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Item mantém alinhamento vertical */
+.app-navbar__item {
+  display: flex;
+  align-items: center;
+}
+
+/* Links com altura fixa e alinhamento interno */
+.app-navbar__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  line-height: 1;
+  padding: 0 1rem;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+  color: var(--text-high, #ffffff);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+  box-sizing: border-box;
+  border: none;
+}
+
+/* Hover / ativo */
+.app-navbar__link:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.06);
+}
+
+.app-navbar__link--active {
+  background: linear-gradient(90deg, rgba(233,69,96,0.12), rgba(214,54,81,0.08));
+  color: var(--text-high, #fff);
+  box-shadow: 0 6px 16px rgba(233,69,96,0.08);
+  border-bottom: 3px solid var(--accent, #e94560);
+}
+
+/* Mobile: permitir scroll horizontal suave e compactar padding */
+@media (max-width: 768px) {
+  .app-navbar {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .app-navbar__list {
+    justify-content: flex-start;
+    gap: 0.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.25rem;
+  }
+
+  .app-navbar__link {
+    height: 36px;
+    padding: 0 0.75rem;
+    font-size: 0.85rem;
+  }
+}

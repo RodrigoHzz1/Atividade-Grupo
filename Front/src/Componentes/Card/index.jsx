@@ -21,7 +21,7 @@ function Card({
       aria-label={title}
       onClick={onClick}
       tabIndex={onClick ? 0 : -1}
-            onKeyDown={(event) => {
+      onKeyDown={(event) => {
         if (onClick && (event.key === "Enter" || event.key === " ")) {
           onClick();
         }

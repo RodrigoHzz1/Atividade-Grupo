@@ -1,0 +1,56 @@
+.manutencao-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-subtitle {
+  color: #666666;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.maintenance-form {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0f3460;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e0e0e0;
+  width: 100%;
+}
+
+.btn-submit {
+  background: #0f3460;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: #1a5a7a;
+  box-shadow: 0 4px 8px rgba(15, 52, 96, 0.3);
+}
+
+.btn-submit:active {
+  transform: scale(0.98);
+}

@@ -1,0 +1,606 @@
+.contato-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* HEADER */
+.contact-header {
+  background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
+  color: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 15px rgba(15, 52, 96, 0.3);
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.contact-header p {
+  font-size: 1.1rem;
+  color: #b0b0b0;
+  margin: 0;
+}
+
+/* EMERGENCY SECTION */
+.emergency-section {
+  margin-bottom: 3rem;
+}
+
+.emergency-banner {
+  background: linear-gradient(135deg, #e94560 0%, #d63651 100%);
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(233, 69, 96, 0.3);
+  text-align: center;
+  border: 2px solid #8b2e2e;
+}
+
+.emergency-banner h2 {
+  font-size: 1.75rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.emergency-banner p {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.emergency-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.emergency-card {
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  border-left: 5px solid #0f3460;
+}
+
+.emergency-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-left-color: #e94560;
+}
+
+.emergency-card.urgent {
+  border: 2px solid #e94560;
+  background: linear-gradient(135deg, #fff9fb 0%, #ffffff 100%);
+  border-left-color: #e94560;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.emergency-card h3 {
+  color: #0f3460;
+  font-size: 1.1rem;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+.emergency-card.urgent h3 {
+  color: #e94560;
+}
+
+.card-phone {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f3460;
+  margin-bottom: 0.75rem;
+  font-family: 'Courier New', monospace;
+}
+
+.emergency-card.urgent .card-phone {
+  color: #e94560;
+}
+
+.emergency-card p {
+  color: #666666;
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.urgent-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #e94560;
+  color: #ffffff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* SUPPORT TEAMS SECTION */
+.support-teams-section {
+  margin-bottom: 3rem;
+}
+
+.support-teams-section h2 {
+  color: #0f3460;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  color: #666666;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.support-table {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #0f3460;
+  color: #ffffff;
+}
+
+th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+td {
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+}
+
+tbody tr:hover {
+  background: #f9f9f9;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.department-name {
+  font-weight: 600;
+  color: #0f3460;
+}
+
+a {
+  color: #0f3460;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #e94560;
+  text-decoration: underline;
+}
+
+/* PROTOCOLS SECTION */
+.protocols-section {
+  margin-bottom: 3rem;
+}
+
+.protocols-section h2 {
+  color: #0f3460;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.protocols-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.protocol-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  border-top: 4px solid #0f3460;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.protocol-card:hover {
+  border-top-color: #e94560;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.protocol-card h3 {
+  color: #0f3460;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.protocol-card ol {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.protocol-card li {
+  color: #555555;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+/* INTERNATIONAL SECTION */
+.international-section {
+  background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+  padding: 2.5rem;
+  border-radius: 8px;
+  border-left: 5px solid #0f3460;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.international-section h2 {
+  color: #0f3460;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.international-info {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.international-info p {
+  color: #555555;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.international-info strong {
+  color: #0f3460;
+  font-weight: 700;
+}
+
+/* HERO CTA */
+.hero-cta {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background: linear-gradient(90deg, rgba(15, 52, 96, 0.95), rgba(10, 20, 35, 0.95));
+  border-radius: 12px;
+  color: #fff;
+  margin-bottom: 1.75rem;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 260px;
+}
+
+.hero-right {
+  width: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-ctas {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #e94560, #d63651);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(233, 69, 96, 0.16);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+}
+
+/* badges */
+.hero-badges {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* hero stats */
+.hero-stats {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  width: 100%;
+}
+
+.stat {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-value {
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* emergency card actions */
+.card-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.btn-inline {
+  background: transparent;
+  border: 1px solid rgba(15, 52, 96, 0.08);
+  padding: 0.45rem 0.7rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* trust section */
+.trust-section {
+  margin: 2rem 0;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.trust-card {
+  background: #fff;
+  color: #0f3460;
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(15, 52, 96, 0.06);
+}
+
+.trust-card h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.trust-card p {
+  margin: 0;
+  color: #444;
+}
+
+/* Floating Action Button */
+.fab {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #e94560, #d63651);
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  font-weight: 800;
+  box-shadow: 0 12px 30px rgba(233, 69, 96, 0.2);
+  cursor: pointer;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.fab:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(233, 69, 96, 0.28);
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4,8,18,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 1rem;
+}
+
+/* Modal box */
+.modal {
+  width: 100%;
+  max-width: 720px;
+  background: linear-gradient(180deg, #ffffff, #fcfcfd);
+  color: #0f2b4a;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(3,10,25,0.5);
+  overflow: hidden;
+}
+
+/* Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(90deg,#0f3460,#071a33);
+  color: #fff;
+}
+
+.modal-header h3 { margin: 0; font-size: 1.1rem; }
+.modal-close {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+
+/* Body (form) */
+.modal-body {
+  padding: 1rem 1.25rem 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Reuse form-field__input look for textarea */
+.modal-body textarea.form-field__input {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* Actions */
+.modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+/* Adjust btn styles if needed */
+.btn { font-weight: 700; border-radius: 8px; padding: 0.6rem 1rem; cursor: pointer; }
+.btn-primary { background: linear-gradient(90deg,#e94560,#d63651); color: #fff; border: none; }
+.btn-outline { background: transparent; border: 1px solid rgba(15,52,96,0.12); color: #0f3460; }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .emergency-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .protocols-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-header {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .emergency-banner {
+    padding: 1.5rem;
+  }
+
+  .emergency-banner h2 {
+    font-size: 1.25rem;
+  }
+
+  .emergency-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .emergency-card {
+    padding: 1.5rem;
+  }
+
+  .card-icon {
+    font-size: 2rem;
+  }
+
+  th,
+  td {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .international-section {
+    padding: 1.5rem;
+  }
+
+  .protocol-card {
+    padding: 1.5rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem;
+  }
+
+  .hero-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .modal { max-width: 100%; border-radius: 10px; }
+  .modal-body { padding: 0.75rem; }
+}

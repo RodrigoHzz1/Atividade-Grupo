@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 // Importação dos Componentes de Layout Globais (Enviados por você)
-import Header from './components/Header'; // Ajuste o caminho conforme suas pastas[cite: 12]
-import Navbar from './components/Navbar'; //[cite: 9]
-import Footer from './components/Footer'; //[cite: 8]
+import Header from "./Componentes/Header/index";
+import Navbar from "./Componentes/Navbar/index";
+import Footer from "./Componentes/Footer/index";
 
 // Importação das 7 Páginas Obrigatórias
-import Home from './Home';
-import QuemSomos from './QuemSomos';
-import Incidentes from './Incidentes';
-import Manutencao from './Manutencao';
-import Producao from './Producao';
-import Tripulacao from './Tripulacao';
-import Contato from './Contato';
+import Home from './Pages/Home/index';
+import QuemSomos from './Pages/QuemSomos/index';
+import Incidentes from './Pages/Incidentes/index';
+import Manutencao from './Pages/Manutencao/index';
+import Producao from './Pages/Producao/index';
+import Tripulacao from './Pages/Tripulacao/index';
+import Contato from './Pages/Contato/index';
 
 import './App.css'; 
 

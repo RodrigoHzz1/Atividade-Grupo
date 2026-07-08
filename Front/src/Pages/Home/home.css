@@ -1,0 +1,353 @@
+.home-page {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
+  color: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(15, 52, 96, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: rgba(233, 69, 96, 0.1);
+  border-radius: 50%;
+  transform: translate(100px, -100px);
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 1px;
+}
+
+.dashboard-header p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #b0b0b0;
+  font-weight: 400;
+}
+
+.timestamp {
+  font-size: 0.85rem !important;
+  color: #999999 !important;
+  margin-top: 1rem !important;
+}
+
+.dashboard-metrics {
+  margin-bottom: 3rem;
+}
+
+.dashboard-metrics h2 {
+  font-size: 1.75rem;
+  color: #1a1a2e;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.dashboard-metrics h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: #e94560;
+  border-radius: 2px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* LEADERSHIP SECTION */
+.leadership-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.leadership-section h2 {
+  font-size: 1.75rem;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.leadership-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: #e94560;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  color: #666666;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.leaders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.leader-card {
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.75rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid #0f3460;
+  position: relative;
+  overflow: hidden;
+}
+
+.leader-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e94560, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.leader-card:hover {
+  transform: translateY(-8px);
+  border-top-color: #e94560;
+  box-shadow: 0 8px 20px rgba(233, 69, 96, 0.2);
+  border: 2px solid #e94560;
+}
+
+.leader-card:hover::before {
+  opacity: 1;
+}
+
+.leader-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.leader-card h3 {
+  color: #0f3460;
+  font-size: 1.2rem;
+  margin: 0.75rem 0;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.leader-position {
+  color: #e94560;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.leader-department {
+  color: #666666;
+  font-size: 0.85rem;
+  margin: 0.5rem 0 0 0;
+  background: #f0f0f0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.dashboard-alerts {
+  margin-bottom: 2rem;
+}
+
+.dashboard-alerts h2 {
+  font-size: 1.75rem;
+  color: #1a1a2e;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.dashboard-alerts h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: #e94560;
+  border-radius: 2px;
+}
+
+.alerts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.alert {
+  padding: 1.25rem;
+  border-radius: 8px;
+  border-left: 5px solid;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.alert-warning {
+  background: #fffbf0;
+  border-left-color: #ffa500;
+  color: #8b6f47;
+}
+
+.alert-info {
+  background: #f0f7ff;
+  border-left-color: #0f3460;
+  color: #1a1a2e;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-header {
+    padding: 2rem 1.5rem;
+  }
+
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+
+  .leaders-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding: 1.5rem;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .dashboard-header p {
+    font-size: 0.95rem;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .dashboard-metrics h2,
+  .dashboard-alerts h2,
+  .leadership-section h2 {
+    font-size: 1.25rem;
+  }
+
+  .leadership-section {
+    padding: 1.5rem;
+  }
+
+  .leaders-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .leader-card {
+    padding: 1rem;
+  }
+
+  .leader-icon {
+    font-size: 2rem;
+  }
+
+  .leader-card h3 {
+    font-size: 1rem;
+  }
+
+  .leader-position {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .leaders-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.25rem;
+  }
+}
