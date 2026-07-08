@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
-// Importação das 7 Páginas baseadas na tua estrutura de pastas
+
+
+// Importação dos componentes das 7 páginas baseadas na tua estrutura de pastas
 import Home from './Pages/Home/home';
 import QuemSomos from './Pages/QuemSomos/quemsomos';
 import Incidentes from './Pages/Incidentes/incidentes';
@@ -39,6 +41,7 @@ export default function App() {
           <Route path="/producao" element={<Producao />} />
           <Route path="/tripulacao" element={<Tripulacao />} />
           <Route path="/contato" element={<Contato />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </main>
 
