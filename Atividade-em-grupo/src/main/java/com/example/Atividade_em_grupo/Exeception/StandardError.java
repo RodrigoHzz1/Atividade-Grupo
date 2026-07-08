@@ -32,5 +32,5 @@ public class StandardError  {
     public String getMessage() { return message; }
     public void setMessage(String message) { this.message = message; }
 
-    public String getPath() { return path; path; }
+    public String getPath() { return path; } //
 }
