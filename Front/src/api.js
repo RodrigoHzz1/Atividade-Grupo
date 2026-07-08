@@ -44,7 +44,7 @@ export async function apiPost(endpoint, data) {
   }
 }
 
-/**
+/** kaua
  * Faz requisição PUT
  * @param {string} endpoint - Path da API
  * @param {object} data - Dados a atualizar
