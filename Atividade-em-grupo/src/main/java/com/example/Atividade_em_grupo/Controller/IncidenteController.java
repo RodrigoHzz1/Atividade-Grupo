@@ -17,14 +17,13 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/incidentes")
-
 public class IncidenteController {
 
     @Autowired
     private IncidenteService service;
 
     @Autowired
-    private IncidenteRepository repository; // Necessário apenas para o método PUT direto no controller
+    private IncidenteRepository repository;
 
     @GetMapping
     public ResponseEntity<List<IncidenteResponseDTO>> listarTodos() {
@@ -58,6 +57,18 @@ public class IncidenteController {
         return ResponseEntity.status(HttpStatus.OK).body(Map.of(
                 "Mensagem", "Incidente atualizado com sucesso!",
                 "id", incidenteExistente.getId()
+        ));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Map<String, Object>> deletar(@PathVariable Long id) {
+        IncidenteModel incidenteExistente = repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Incidente não encontrado com o ID: " + id));
+
+        repository.delete(incidenteExistente);
+
+        return ResponseEntity.status(HttpStatus.OK).body(Map.of(
+                "Mensagem", "Incidente deletado com sucesso!"
         ));
     }
 }

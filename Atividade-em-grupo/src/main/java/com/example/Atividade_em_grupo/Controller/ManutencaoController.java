@@ -17,9 +17,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/manutencao")
-@CrossOrigin(origins = "http://localhost:5173")
 public class ManutencaoController {
-
 
     @Autowired
     private ManutencaoService service;
@@ -58,6 +56,18 @@ public class ManutencaoController {
         return ResponseEntity.status(HttpStatus.OK).body(Map.of(
                 "Mensagem", "Solicitação de manutenção atualizada com sucesso!",
                 "id", manutencaoExistente.getId()
+        ));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Map<String, Object>> deletar(@PathVariable Long id) {
+        ManutencaoModel manutencaoExistente = repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Manutenção não encontrada com o ID: " + id));
+
+        repository.delete(manutencaoExistente);
+
+        return ResponseEntity.status(HttpStatus.OK).body(Map.of(
+                "Mensagem", "Solicitação de manutenção deletada com sucesso!"
         ));
     }
 }

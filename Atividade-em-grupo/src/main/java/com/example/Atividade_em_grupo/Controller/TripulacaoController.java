@@ -17,7 +17,6 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/tripulacao")
-
 public class TripulacaoController {
 
     @Autowired
@@ -57,6 +56,18 @@ public class TripulacaoController {
         return ResponseEntity.status(HttpStatus.OK).body(Map.of(
                 "Mensagem", "Escala de tripulação atualizada com sucesso!",
                 "id", tripulacaoExistente.getId()
+        ));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Map<String, Object>> deletar(@PathVariable Long id) {
+        TripulacaoModel tripulacaoExistente = repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Escala não encontrada com o ID: " + id));
+
+        repository.delete(tripulacaoExistente);
+
+        return ResponseEntity.status(HttpStatus.OK).body(Map.of(
+                "Mensagem", "Membro da tripulação deletado com sucesso!"
         ));
     }
 }

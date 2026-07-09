@@ -17,7 +17,6 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/producao")
-
 public class ProducaoController {
 
     @Autowired
@@ -56,6 +55,18 @@ public class ProducaoController {
         return ResponseEntity.status(HttpStatus.OK).body(Map.of(
                 "Mensagem", "Dados de produção atualizados com sucesso!",
                 "id", producaoExistente.getId()
+        ));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Map<String, Object>> deletar(@PathVariable Long id) {
+        ProducaoModel producaoExistente = repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Registro de produção não encontrado com o ID: " + id));
+
+        repository.delete(producaoExistente);
+
+        return ResponseEntity.status(HttpStatus.OK).body(Map.of(
+                "Mensagem", "Dados de produção deletados com sucesso!"
         ));
     }
 }
