@@ -16,9 +16,10 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/manutencoes")
-@CrossOrigin(origins = "*")
+@RequestMapping("/api/manutencao")
+@CrossOrigin(origins = "http://localhost:5173")
 public class ManutencaoController {
+
 
     @Autowired
     private ManutencaoService service;
